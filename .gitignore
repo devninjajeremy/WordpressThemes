@@ -24,8 +24,12 @@ wp-admin/*
 # and "themes" directories.
 #wp-content/*
 wp-content/uploads/
-#!wp-content/plugins/
+wp-content/plugins/
 #!wp-content/themes/
+
+#ignore default themes
+wp-content/themes/twentytwelve/*
+wp-content/themes/twentythirteen/*
  
 # Ignore everything in the "plugins" directory, except the plugins you
 # specify (see the commented-out examples for hints on how to do this.)
