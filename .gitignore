@@ -28,6 +28,9 @@ wp-content/plugins/
 #!wp-content/themes/
 
 #ignore default themes
+wp-content/themes/index.php
+wp-content/index.php
+
 wp-content/themes/twentytwelve/*
 wp-content/themes/twentythirteen/*
  
