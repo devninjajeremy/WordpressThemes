@@ -204,8 +204,8 @@ JQTWEET = {
             }
 	        }
 
-	        jQuery.ajax({
-	            url: 'includes/grabtweets.php',
+	        /*jQuery.ajax({
+	            url: '../../incl/grabtweets.php',
 	            type: 'POST',
 	            dataType: 'json',
 	            data: request,
@@ -255,7 +255,7 @@ JQTWEET = {
 	             
 	            }   
 	 
-	        });
+	        }); */
 	 
 	    }, 
 	     

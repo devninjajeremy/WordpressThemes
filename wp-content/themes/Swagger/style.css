@@ -3,7 +3,7 @@ Theme Name: Swag
 Theme URI: http://devninjas.net/themes/swag;
 Author: Jeremy Davis
 Author URI: http://www.devninjas.net;
-Description: A semantic HTML/CSS framework base theme for WordPress Developers ported from Twitter Bootstrap
+Description: A child theme of the Bootstrap for wordpress theme
 Version: 1.0
 =======
 License: GNU General Public License
@@ -22,7 +22,6 @@ Comfortable with LESS?  Check out the /assets/css/less folder where the bootstra
 
 Not comfortable with LESS?  You can override the compiled bootstrapwp.css file by adding custom styles here.
 -------------------------------------------------- */
-
 @import url("assets/webicons/fc-webicons.css");
 @import url("assets/css/sections.css");
 @import url("assets/fontello/css/entypo-embedded.css");
@@ -484,35 +483,35 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
 
-ul.arrow1 li { 
-	background:url("assets/img/bullets/arrow1.png") 0 4px no-repeat;
-	background-size: 6px 9px; 
-}
+	ul.arrow1 li { 
+		background:url("assets/img/bullets/arrow1.png") 0 4px no-repeat;
+		background-size: 6px 9px; 
+	}
 
-ul.arrow2 li { 
-	background:url("assets/img/bullets/arrow2.png") 0 4px no-repeat;
-	background-size: 12px 9px;
-}
+	ul.arrow2 li { 
+		background:url("assets/img/bullets/arrow2.png") 0 4px no-repeat;
+		background-size: 12px 9px;
+	}
 
-ul.arrow3 li { 
-	background:url("assets/img/bullets/arrow3.png") 0 4px no-repeat;
-	background-size: 11px 9px;
-}
+	ul.arrow3 li { 
+		background:url("assets/img/bullets/arrow3.png") 0 4px no-repeat;
+		background-size: 11px 9px;
+	}
 
-ul.check li {
-	background:url("assets/img/bullets/check.png") 0 1px no-repeat;
-	background-size: 15px 14px;
-}
+	ul.check li {
+		background:url("assets/img/bullets/check.png") 0 1px no-repeat;
+		background-size: 15px 14px;
+	}
 
-ul.star li { 
-	background:url("assets/img/bullets/star.png") 0 2px no-repeat;
-	background-size: 15px 13px;
-}
+	ul.star li { 
+		background:url("assets/img/bullets/star.png") 0 2px no-repeat;
+		background-size: 15px 13px;
+	}
 
-ul.diamond li { 
-	background:url("assets/img/bullets/diamond.png") 0 3px no-repeat;
-	background-size: 12px 11px;
-}
+	ul.diamond li { 
+		background:url("assets/img/bullets/diamond.png") 0 3px no-repeat;
+		background-size: 12px 11px;
+	}
 	
 }
 
@@ -521,7 +520,7 @@ ul.diamond li {
 ================================================== */
 
 .logo-text { 
-	width:150px;   
+	width:auto;   
 	color:#fff;
 	font-size:50px; 
 	font-family: 'ChunkFiveRegular', Arial, sans-serif; 

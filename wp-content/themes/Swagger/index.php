@@ -1,616 +1,379 @@
-
-<!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 "> <![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
-<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-
-	<!-- Basic Page Needs
-  ================================================== -->
-	<meta charset="utf-8">
-	<title>Swag</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-	<!-- Mobile Specific Metas
-  ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <!-- Favicons
-  ================================================== -->
-	<link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/assets/img/favicon.ico">
-	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri();?>/assets/img/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_template_directory_uri();?>/assets/img/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_template_directory_uri();?>/assets/img/apple-touch-icon-114x114.png">
-
-	<!-- CSS
-  ================================================== -->
-
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/base.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/style.css">
-
-
-   <!-- Revolution Slider  -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/revslider/rs-plugin/css/settings.css">
-   
-
-   <!-- Modernizr
-  ================================================== -->
-    <script src="<?php echo get_template_directory_uri();?>/assets/js/modernizr.js"></script>
-
-</head>
-
-<body>
-<!-- preloader -->
-<div id="preloader">
-    <div id="status">&nbsp;</div>
-</div><!-- /preloader -->
-
-<div id="main-wrapper">
-
-				<!-- main navigation -->
-				<div class="menusurround">
-              
-                    	<nav id="menu" class="menu">
-                			<ul id="mainnav" class="level-1 slide-nav">
-
-                				<li class="has-subnav">
-									<a href="index.html#home-marker">Home</a>
-                    					<ul class="level-2">
-					  						<li><a href="index-background.html">Background Slider</a></li>
-                      						<li><a href="index-camera.html">Camera Slider</a></li>
-                      						<li><a href="index.html">Revolution Slider</a></li>
-                      						<li><a href="index-parallax1.html">Parallax Intro 1</a></li>
-                                            <li><a href="index-parallax2.html">Parallax Intro 2</a></li>
-                                            <li><a href="index-parallax3.html">Parallax Intro 3</a></li>
-                                            <li><a href="index-parallax4.html">Parallax Intro 4</a></li>
-                                            <li><a href="index-parallax5.html">Newsletter Signup Intro</a></li>
-                    					</ul>
-                				</li>
-                
-        						<li class="has-subnav">
-                					<a href="index.html#about-marker">About</a>
-                						<ul class="level-2">
-					  						<li><a href="index.html#about-marker">About on Homepage</a></li>
-                      						<li><a href="elements.html">Elements / Typography</a></li>
-                    					</ul>
-               					</li>
-                
-        						<li class="no-subnav">
-                					<a href="index.html#services-marker">Services</a>
-                				</li>
-				
-                				<li class="no-subnav">
-									<a href="index.html#staff-marker">The Team</a>
-								</li>
-				
-								<li class="has-subnav">
-									<a href="index.html#portfolio-marker">Our Work</a>
-                    					<ul class="level-2">
-					  						<li><a href="index.html#portfolio-marker">Work on Homepage</a></li>
-                      						<li><a href="project-single.html">Single Project</a></li>
-                    					</ul>
-								</li>
-                
-               					<li class="has-subnav">
-               						<a href="index.html#blog-marker">Blog</a>
-										<ul class="level-2">
-					  						<li><a href="index.html#blog-marker">Blog on Homepage</a></li>
-                      						<li><a href="blog.html">Full Blog</a></li>
-                      						<li><a href="blog-single.html">Single Article</a></li>
-                    					</ul>
-                				</li>
-               					
-                                <li class="no-subnav">
-                                	<a href="index.html#contact-marker">Contact</a>
-                                </li>
-
-							</ul>
-            			</nav>
-            		<!-- end menu --> 	
-                    <!-- add logo --> 
-                   <a href="index.html#">
-                   	 <div class="logo-text">Swag<span>.</span></div>
-                   	</a>
-                    <!-- end logo --> 
-                    
-                </div><!-- /main navigation --> 
-
+<?php get_header(); ?>
 	<a id="home-marker" class="anchor"></a>
-    
 
-    
     <!-- Home Section - Revolution Slider
       ================================================== -->	
-    	<section id="home-section" class="section-wrapper very-top-padding">
-        
-        
-        
-        
-   		  		<div class="fullscreen-container">
-					<div class="fullscreenbanner">
-						<ul>
-							<!-- THE FIRST SLIDE -->
-							<li data-transition="random" data-slotamount="10" data-masterspeed="300">
-										<!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
-                                        <img src="<?php echo get_template_directory_uri();?>/assets/img/demo/fullscreen-images/city.jpg" alt="city">
-										
+    <section id="home-section" class="section-wrapper very-top-padding">
+   		<div class="fullscreen-container">
+			<div class="fullscreenbanner">
+				<ul>
+				<!-- THE FIRST SLIDE -->
+					<li data-transition="random" data-slotamount="10" data-masterspeed="300">
+						<!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/demo/fullscreen-images/city.jpg" alt="city">
 
-										<!-- THE CAPTIONS IN THIS SLDIE -->
-										<div class="caption very_large_text_league sfl"
-											 data-x="45"
-											 data-y="60"
-											 data-speed="700"
-											 data-start="1000"
-											 data-easing="easeOutExpo"  >WELCOME TO SWAG!</div>
-                                             
-                                             
-                                        <div class="caption  modern_medium_fat_white_on_black randomrotate"
-											 data-x="45"
-											 data-y="142"
-											 data-speed="500"
-											 data-start="2500"
-											 data-easing="easeOutExpo"  >THE ULTIMATE ONE PAGE TEMPLATE</div>
-                                             
-                                        <div class="caption modern_medium_fat_black_on_white  sfl"
-											 data-x="45"
-											 data-y="183"
-											 data-speed="800"
-											 data-start="4000"
-											 data-easing="easeOutExpo"  >Perfect for Agencies</div>
-                                             
-                                      <div class="caption  modern_medium_fat_black_on_white sfb"
-											 data-x="45"
-											 data-y="225"
-											 data-speed="800"
-											 data-start="4500"
-											 data-easing="easeOutExpo"  >Designers &amp; Photographers</div>
-                                             
-                                             
-                                        <div class="caption  modern_medium_fat_black_on_white sfl"
-											 data-x="45"
-											 data-y="267"
-											 data-speed="800"
-											 data-start="5000"
-											 data-easing="easeOutExpo"  >Or Any Creative!</div>
-
-										
-
-										<div class="caption lfr"
-											 data-x="515"
-											 data-y="141"
-											 data-speed="700"
-											 data-start="1500"
-											 data-easing="easeOutCubic"  ><img src="<?php echo get_template_directory_uri();?>/assets/img/demo/rev-slider/slider/tablets1.png" alt="Image 13"></div>
-																		
-                                                                        
-                                                                        
-                                      </li>
-
-							<!-- THE SECOND SLIDE -->
-							<li data-transition="papercut" data-slotamount="15" data-masterspeed="300" data-delay="9400">
-										<img src="<?php echo get_template_directory_uri();?>/assets/img/demo/frosted/55.jpg" alt="frosted">
-                                        
-                                        <!-- THE CAPTIONS IN THIS SLDIE -->
-										<div class="caption very_large_text_league sfl"
-											 data-x="45"
-											 data-y="60"
-											 data-speed="700"
-											 data-start="1000"
-											 data-easing="easeOutExpo"  >BUILD YOUR DREAM SITE</div>
-
-										
-                                             
-                                        <div class="caption  modern_medium_fat randomrotate"
-											 data-x="45"
-											 data-y="165"
-											 data-speed="300"
-											 data-start="1400"
-											 data-easing="easeOutExpo"  >Parallax Backgrounds</div>
-                                             
-                                        <div class="caption  modern_medium_fat randomrotate"
-											 data-x="45"
-											 data-y="195"
-											 data-speed="300"
-											 data-start="2300"
-											 data-easing="easeOutExpo"  >Multiple Intros</div>
-                                             
-                                        <div class="caption  modern_medium_fat randomrotate"
-											 data-x="45"
-											 data-y="225"
-											 data-speed="300"
-											 data-start="2600"
-											 data-easing="easeOutExpo"  >Responsive Layout</div>
-                                             
-                                        <div class="caption  modern_medium_fat randomrotate"
-											 data-x="45"
-											 data-y="255"
-											 data-speed="300"
-											 data-start="2900"
-											 data-easing="easeOutExpo"  >Retina Icons</div>
-                                             
-                                        <div class="caption  modern_medium_fat randomrotate"
-											 data-x="45"
-											 data-y="285"
-											 data-speed="300"
-											 data-start="3200"
-											 data-easing="easeOutExpo"  >Portfolios</div>
-                                             
-                                        <div class="caption  modern_medium_fat randomrotate"
-											 data-x="45"
-											 data-y="315"
-											 data-speed="300"
-											 data-start="3500"
-											 data-easing="easeOutExpo"  >Staff</div>
-                                             
-                                        <div class="caption  modern_medium_fat randomrotate"
-											 data-x="45"
-											 data-y="345"
-											 data-speed="300"
-											 data-start="3800"
-											 data-easing="easeOutExpo"  >Price Tables</div>
-                                             
-                                        <div class="caption  modern_medium_fat randomrotate"
-											 data-x="45"
-											 data-y="375"
-											 data-speed="300"
-											 data-start="4100"
-											 data-easing="easeOutExpo"  >Multi Format Blog</div>
-                                             
-                                        <div class="caption  modern_medium_fat_white randomrotate"
-											 data-x="45"
-											 data-y="405"
-											 data-speed="300"
-											 data-start="4400"
-											 data-easing="easeOutExpo"  >Revolution Slider 3.0!</div>
-                                             
-                                        <div class="caption  modern_medium_fat randomrotate"
-											 data-x="45"
-											 data-y="435"
-											 data-speed="300"
-											 data-start="4700"
-											 data-easing="easeOutExpo"  >Instagram</div>
-                                             
-                                        <div class="caption  modern_medium_fat randomrotate"
-											 data-x="45"
-											 data-y="465"
-											 data-speed="300"
-											 data-start="5000"
-											 data-easing="easeOutExpo"  >Facebook</div>
-                                             
-                                        <div class="caption  modern_medium_fat randomrotate"
-											 data-x="45"
-											 data-y="495"
-											 data-speed="300"
-											 data-start="5300"
-											 data-easing="easeOutExpo"  >Twitter</div>
-
-										
-                                        <div class="caption sfr"
-											 data-x="729"
-											 data-y="283"
-											 data-speed="400"
-											 data-start="1000"
-											 data-easing="easeOutExpo"  ><img src="<?php echo get_template_directory_uri();?>/assets/img/demo/rev-slider/slider/port-laptop.png" alt="laptop"></div>
-                                             
-                                        <div class="caption sfr"
-											 data-x="457"
-											 data-y="165"
-											 data-speed="400"
-											 data-start="2500"
-											 data-easing="easeOutExpo"  ><img src="<?php echo get_template_directory_uri();?>/assets/img/demo/rev-slider/slider/port-monitor.png" alt="monitor"></div>
-                                             
-                                        <div class="caption sfl"
-											 data-x="324"
-											 data-y="241"
-											 data-speed="400"
-											 data-start="4000"
-											 data-easing="easeOutExpo"  ><img src="<?php echo get_template_directory_uri();?>/assets/img/demo/rev-slider/slider/ipad.png" alt="ipad"></div>
-                                             
-                                        <div class="caption sfr"
-											 data-x="466"
-											 data-y="309"
-											 data-speed="400"
-											 data-start="5500"
-											 data-easing="easeOutExpo"  ><img src="<?php echo get_template_directory_uri();?>/assets/img/demo/rev-slider/slider/iphone.png" alt="iphone"></div>
-                                        
-                                        
-                                        
-                                        
-                                      </li>
-                                      
-							
-
-							<!-- THE THIRD SLIDE -->
-							<li data-transition="slidedown" data-slotamount="7" data-masterspeed="300">
-									<img src="<?php echo get_template_directory_uri();?>/assets/img/demo/rev-slider/slider/black.jpg" alt="black">
-
-									<div class="caption fade fullscreenvideo" data-autoplay="true" data-x="0" data-y="0" data-speed="500" data-start="510" data-easing="easeOutBack"><iframe src="http://player.vimeo.com/video/75660130?title=0&byline=0&portrait=0;api=1" class="rev-video"></iframe></div>
-                                    
-                                    
-                                    
-
-									<div class="caption very_large_text_league sft stt"
-										 data-x="327"
-										 data-y="25"
-										 data-speed="300"
-										 data-start="500"
-										 data-easing="easeOutExpo" data-end="4000" data-endspeed="300" data-endeasing="easeInSine" >LOOK, A FULLSCREEN VIDEO!</div>
-							</li>
-
-
-							<!-- THE FOURTH SLIDE -->
-							<li data-transition="random" data-slotamount="1" data-masterspeed="300">
-									<img src="<?php echo get_template_directory_uri();?>/assets/img/demo/fullscreen-images/girl-field.jpg" alt="girl">
-                                    
-                                    <!-- THE CAPTIONS IN THIS SLDIE -->
-										<div class="caption very_large_text_league fade"
-											 data-x="45"
-											 data-y="60"
-											 data-speed="300"
-											 data-start="500"
-											 data-easing="easeOutExpo"  >READY TO IMPRESS?</div>
-
-									<div class="caption modern_medium_fat_black_on_white lft"
-										 data-x="45"
-										 data-y="142"
-										 data-speed="300"
-										 data-start="800"
-										 data-easing="easeOutBounce"  >Don't Wait..</div>
-
-									<div class="caption modern_medium_fat_white_on_black lft"
-										 data-x="45"
-										 data-y="183"
-										 data-speed="800"
-										 data-start="1100"
-										 data-easing="easeOutBounce"  >GET SWAG TODAY!</div>
-                                         
-                                     <div class="caption modern_medium_fat_black_on_white lft"
-										 data-x="45"
-										 data-y="225"
-										 data-speed="800"
-										 data-start="1400"
-										 data-easing="easeOutBounce"  >Only at ThemeForest</div>
-
-									
-							</li>
-						</ul>
-
-						<div class="tp-bannertimer"></div>
-					</div>
-				</div>
-        </section>
-    <!-- End Home Section - Revolution Slider
+						<!-- THE CAPTIONS IN THIS SLDIE -->
+						<div class="caption very_large_text_league sfl"
+							 data-x="45"
+							 data-y="60"
+							 data-speed="700"
+							 data-start="1000"
+							 data-easing="easeOutExpo">WELCOME TO SWAG!</div>  
+                        <div class="caption  modern_medium_fat_white_on_black randomrotate"
+							 data-x="45"
+							 data-y="142"
+							 data-speed="500"
+							 data-start="2500"
+							 data-easing="easeOutExpo">THE ULTIMATE ONE PAGE TEMPLATE</div>                               
+                        <div class="caption modern_medium_fat_black_on_white  sfl"
+							 data-x="45"
+							 data-y="183"
+							 data-speed="800"
+							 data-start="4000"
+							 data-easing="easeOutExpo">Perfect for Agencies</div>     
+						<div class="caption  modern_medium_fat_black_on_white sfb"
+							 data-x="45"
+							 data-y="225"
+							 data-speed="800"
+							 data-start="4500"
+							 data-easing="easeOutExpo">Designers &amp; Photographers</div>    
+                        <div class="caption  modern_medium_fat_black_on_white sfl"
+							 data-x="45"
+							 data-y="267"
+							 data-speed="800"
+							 data-start="5000"
+							 data-easing="easeOutExpo">Or Any Creative!</div>
+						<div class="caption lfr"
+							 data-x="515"
+							 data-y="141"
+							 data-speed="700"
+							 data-start="1500"
+							 data-easing="easeOutCubic">
+							 	<img src="<?php echo get_template_directory_uri();?>/assets/img/demo/rev-slider/slider/tablets1.png" alt="Image 13">
+						</div>
+					</li>
+					<!-- THE SECOND SLIDE -->
+					<li data-transition="papercut" data-slotamount="15" data-masterspeed="300" data-delay="9400">
+						<img src="<?php echo get_template_directory_uri();?>/assets/img/demo/frosted/55.jpg" alt="frosted">
+                        <!-- THE CAPTIONS IN THIS SLDIE -->
+						<div class="caption very_large_text_league sfl"
+							 data-x="45"
+							 data-y="60"
+							 data-speed="700"
+							 data-start="1000"
+							 data-easing="easeOutExpo">BUILD YOUR DREAM SITE</div> 
+                        <div class="caption  modern_medium_fat randomrotate"
+							 data-x="45"
+							 data-y="165"
+							 data-speed="300"
+							 data-start="1400"
+							 data-easing="easeOutExpo">Parallax Backgrounds</div>   
+                        <div class="caption  modern_medium_fat randomrotate"
+							 data-x="45"
+							 data-y="195"
+							 data-speed="300"
+							 data-start="2300"
+							 data-easing="easeOutExpo">Multiple Intros</div>
+                        <div class="caption  modern_medium_fat randomrotate"
+							 data-x="45"
+							 data-y="225"
+							 data-speed="300"
+							 data-start="2600"
+							 data-easing="easeOutExpo">Responsive Layout</div>
+                        <div class="caption  modern_medium_fat randomrotate"
+							 data-x="45"
+							 data-y="255"
+							 data-speed="300"
+							 data-start="2900"
+							 data-easing="easeOutExpo">Retina Icons</div>
+                        <div class="caption  modern_medium_fat randomrotate"
+							 data-x="45"
+							 data-y="285"
+							 data-speed="300"
+							 data-start="3200"
+							 data-easing="easeOutExpo">Portfolios</div>  
+                        <div class="caption  modern_medium_fat randomrotate"
+							 data-x="45"
+							 data-y="315"
+							 data-speed="300"
+							 data-start="3500"
+							 data-easing="easeOutExpo">Staff</div>     
+                        <div class="caption  modern_medium_fat randomrotate"
+							 data-x="45"
+							 data-y="345"
+							 data-speed="300"
+							 data-start="3800"
+							 data-easing="easeOutExpo">Price Tables</div>
+                        <div class="caption  modern_medium_fat randomrotate"
+							 data-x="45"
+							 data-y="375"
+							 data-speed="300"
+							 data-start="4100"
+							 data-easing="easeOutExpo">Multi Format Blog</div>
+                        <div class="caption  modern_medium_fat_white randomrotate"
+							 data-x="45"
+							 data-y="405"
+							 data-speed="300"
+							 data-start="4400"
+							 data-easing="easeOutExpo">Revolution Slider 3.0!</div>
+                        <div class="caption  modern_medium_fat randomrotate"
+							 data-x="45"
+							 data-y="435"
+							 data-speed="300"
+							 data-start="4700"
+							 data-easing="easeOutExpo">Instagram</div>
+                        <div class="caption  modern_medium_fat randomrotate"
+							 data-x="45"
+							 data-y="465"
+							 data-speed="300"
+							 data-start="5000"
+							 data-easing="easeOutExpo">Facebook</div>
+                        <div class="caption  modern_medium_fat randomrotate"
+							 data-x="45"
+							 data-y="495"
+							 data-speed="300"
+							 data-start="5300"
+							 data-easing="easeOutExpo">Twitter</div>
+                        <div class="caption sfr"
+							 data-x="729"
+							 data-y="283"
+							 data-speed="400"
+							 data-start="1000"
+							 data-easing="easeOutExpo">
+							 	<img src="<?php echo get_template_directory_uri();?>/assets/img/demo/rev-slider/slider/port-laptop.png" alt="laptop">
+						</div>
+                        <div class="caption sfr"
+							 data-x="457"
+							 data-y="165"
+							 data-speed="400"
+							 data-start="2500"
+							 data-easing="easeOutExpo">
+							 	<img src="<?php echo get_template_directory_uri();?>/assets/img/demo/rev-slider/slider/port-monitor.png" alt="monitor">
+						</div>                                         
+                        <div class="caption sfl"
+							 data-x="324"
+							 data-y="241"
+							 data-speed="400"
+							 data-start="4000"
+							 data-easing="easeOutExpo">
+							 	<img src="<?php echo get_template_directory_uri();?>/assets/img/demo/rev-slider/slider/ipad.png" alt="ipad">
+						</div>           
+                        <div class="caption sfr"
+							 data-x="466"
+							 data-y="309"
+							 data-speed="400"
+							 data-start="5500"
+							 data-easing="easeOutExpo">
+							 	<img src="<?php echo get_template_directory_uri();?>/assets/img/demo/rev-slider/slider/iphone.png" alt="iphone">
+						</div>
+                    </li>
+					<!-- THE THIRD SLIDE -->
+					<li data-transition="slidedown" data-slotamount="7" data-masterspeed="300">
+						<img src="<?php echo get_template_directory_uri();?>/assets/img/demo/rev-slider/slider/black.jpg" alt="black">
+						<div class="caption fade fullscreenvideo" data-autoplay="true" data-x="0" data-y="0" data-speed="500" data-start="510" data-easing="easeOutBack">
+							<iframe src="http://player.vimeo.com/video/75660130?title=0&byline=0&portrait=0;api=1" class="rev-video"></iframe>
+						</div>
+						<div class="caption very_large_text_league sft stt"
+							 data-x="327"
+							 data-y="25"
+							 data-speed="300"
+							 data-start="500"
+							 data-easing="easeOutExpo" data-end="4000" data-endspeed="300" data-endeasing="easeInSine" >LOOK, A FULLSCREEN VIDEO!</div>
+					</li>
+					<!-- THE FOURTH SLIDE -->
+					<li data-transition="random" data-slotamount="1" data-masterspeed="300">
+						<img src="<?php echo get_template_directory_uri();?>/assets/img/demo/fullscreen-images/girl-field.jpg" alt="girl">
+                        <!-- THE CAPTIONS IN THIS SLDIE -->
+						<div class="caption very_large_text_league fade"
+							 data-x="45"
+							 data-y="60"
+							 data-speed="300"
+							 data-start="500"
+							 data-easing="easeOutExpo">READY TO IMPRESS?</div>
+						<div class="caption modern_medium_fat_black_on_white lft"
+							 data-x="45"
+							 data-y="142"
+							 data-speed="300"
+							 data-start="800"
+							 data-easing="easeOutBounce"  >Don't Wait..</div>
+						<div class="caption modern_medium_fat_white_on_black lft"
+							 data-x="45"
+							 data-y="183"
+							 data-speed="800"
+							 data-start="1100"
+							 data-easing="easeOutBounce">GET SWAG TODAY!</div>
+                         <div class="caption modern_medium_fat_black_on_white lft"
+							 data-x="45"
+							 data-y="225"
+							 data-speed="800"
+							 data-start="1400"
+							 data-easing="easeOutBounce"  >Only at ThemeForest</div>	
+					</li>
+				</ul>
+				<div class="tp-bannertimer"></div>
+			</div>
+		</div>
+	</section>
+	<!-- End Home Section - Revolution Slider
       ================================================== --> 
-      
-
 	<a id="about-marker" class="anchor"></a>
        
     <!-- About Section
       ================================================== -->
-		<section id="about-section" class="section-wrapper about-section"><!-- add main section background here -->
-        	<div class="background-inner1"><!-- add parallax background -->
-        			<div class="background-inner3"><!-- add background color css to this div -->
-        				<div class="section-inner"><!-- add background pattern css to this div -->
-        		
-                			<!-- uncomment items below for shadows -->
-    						<img src="<?php echo get_template_directory_uri();?>/assets/img/shadow-top.png" class="shadow-top" alt="shadow">  
-             				<img src="<?php echo get_template_directory_uri();?>/assets/img/shadow-bot.png" class="shadow-bot" alt="shadow"> 
-            
-            					 <div class="container">
-                		
-                        			<h2 class="section-title">We're Scary Good<br /><span>or so we've been told.</span></h2>
-                
-                					<p class="section-text">Donec posuere auctizzle izzle. Phasellizzle shizznit elizzle ut da bomb you son of a bizzle tincidunt. Maecenas a da bomb. Vestibulizzle izzle lacus fo shizzle mah nizzle fo rizzle, mah home g-dizzle mauris elementum break it down.</p>
-                                    
-                                 </div>
-                        
-									<!-- slider -->
-                  					<ul id="about_slider">
-               							<li><img src="<?php echo get_template_directory_uri();?>/assets/img/demo/about-slider/1.jpg" alt="slide"></li>
-                                        <li><img src="<?php echo get_template_directory_uri();?>/assets/img/demo/about-slider/2.jpg" alt="slide"></li>
-                                        <li><img src="<?php echo get_template_directory_uri();?>/assets/img/demo/about-slider/3.jpg" alt="slide"></li>
-        							</ul><!-- /slider -->
-                                
-                                
-                                <div class="container pt25">            
-                                
-                                <!-- featured -->
-                                <div class="row">
-                                
-                                <div class="one-third column">
-									<h3 class="chunk">We're Amazing<span class="colored">!</span></h3>
-                            		
-                                    	<p>
-                                        Sizzle its fo rizzle yo mamma in arcu own yo' consequat. In convallizzle, arcu sizzle check out this posuere, pizzle lorizzle doggy phat, a blandizzle augue dolizzle bow wow wow shit. Pellentesque ac diam nizzle elizzle sizzle stuff. 
-                                        </p>
-								
-                                </div>
-                      
-                                <div class="one-third column">
-									<h3 class="chunk">It's True<span class="colored">.</span></h3>
-                            		
-                                    	<p>
-                                        Sizzle its fo rizzle yo mamma in arcu own yo' consequat. In convallizzle, arcu sizzle check out this posuere, pizzle lorizzle doggy phat, a blandizzle augue dolizzle bow wow wow shit. Pellentesque ac diam nizzle elizzle sizzle stuff. 
-                                        </p>
-								
-                                </div>
-                                
-                                <div class="one-third column">
-									<h3 class="chunk">Here's Why<span class="colored">:</span></h3>
-                            		
-                                    	<p>
-                                        Sizzle its fo rizzle yo mamma in arcu own yo' consequat. In convallizzle, arcu sizzle check out this posuere, pizzle lorizzle doggy phat, a blandizzle augue dolizzle bow wow wow shit. Pellentesque ac diam nizzle elizzle sizzle stuff. 
-                                        </p>
-                                </div>
-                                
+	<section id="about-section" class="section-wrapper about-section"><!-- add main section background here -->
+    	<div class="background-inner1"><!-- add parallax background -->
+        	<div class="background-inner3"><!-- add background color css to this div -->
+        		<div class="section-inner"><!-- add background pattern css to this div -->
+	    			<!-- uncomment items below for shadows -->
+					<img src="<?php echo get_template_directory_uri();?>/assets/img/shadow-top.png" class="shadow-top" alt="shadow">  
+	 				<img src="<?php echo get_template_directory_uri();?>/assets/img/shadow-bot.png" class="shadow-bot" alt="shadow"> 
+					<div class="container">
+						<h2 class="section-title">We're Scary Good<br /><span>or so we've been told.</span></h2>
+						<p class="section-text">Donec posuere auctizzle izzle. Phasellizzle shizznit elizzle ut da bomb you son of a bizzle tincidunt. Maecenas a da bomb. Vestibulizzle izzle lacus fo shizzle mah nizzle fo rizzle, mah home g-dizzle mauris elementum break it down.</p>
+					</div>
+					<!-- slider -->
+  					<ul id="about_slider">
+						<li><img src="<?php echo get_template_directory_uri();?>/assets/img/demo/about-slider/1.jpg" alt="slide"></li>
+                        <li><img src="<?php echo get_template_directory_uri();?>/assets/img/demo/about-slider/2.jpg" alt="slide"></li>
+                        <li><img src="<?php echo get_template_directory_uri();?>/assets/img/demo/about-slider/3.jpg" alt="slide"></li>
+					</ul><!-- /slider -->
+                    <div class="container pt25">            
+	                    <!-- featured -->
+	                    <div class="row">
+	                        <div class="one-third column">
+								<h3 class="chunk">We're Amazing<span class="colored">!</span></h3>
+                                <p>Sizzle its fo rizzle yo mamma in arcu own yo' consequat. In convallizzle, arcu sizzle check out this posuere, pizzle lorizzle doggy phat, a blandizzle augue dolizzle bow wow wow shit. Pellentesque ac diam nizzle elizzle sizzle stuff.</p>
+                            </div>
+                            <div class="one-third column">
+								<h3 class="chunk">It's True<span class="colored">.</span></h3>
+                                <p>Sizzle its fo rizzle yo mamma in arcu own yo' consequat. In convallizzle, arcu sizzle check out this posuere, pizzle lorizzle doggy phat, a blandizzle augue dolizzle bow wow wow shit. Pellentesque ac diam nizzle elizzle sizzle stuff.</p>
+                            </div>
+                            <div class="one-third column">
+								<h3 class="chunk">Here's Why<span class="colored">:</span></h3>
+                                <p>Sizzle its fo rizzle yo mamma in arcu own yo' consequat. In convallizzle, arcu sizzle check out this posuere, pizzle lorizzle doggy phat, a blandizzle augue dolizzle bow wow wow shit. Pellentesque ac diam nizzle elizzle sizzle stuff.</p>
+                            </div>
+                        </div>
+                        <!-- /featured -->
+                        <div class="row">
+                        	<div class="sixteen columns">
+                        	<a href="elements.html" class="full-width">Be sure to check out all the included elements!</a>
+                            </div>
+                        </div>
+            		</div><!-- /container -->
+                </div><!-- /section-inner -->
+            </div><!-- /background-inner3 -->
+    	</div><!-- /background-inner1 -->
+	</section>
+	<!-- End About Section
+    ================================================== -->
 
-                                </div>
-                               	<!-- /featured -->
-                                
-                                <div class="row">
-                                	<div class="sixteen columns">
-                                	<a href="elements.html" class="full-width">Be sure to check out all the included elements!</a>
-                                    </div>
-                                </div>
-
-                			</div><!-- /container -->
-                            
-                    	</div><!-- /section-inner -->
-                	</div><!-- /background-inner3 -->
-        	</div><!-- /background-inner1 -->
-		</section>
-    <!-- End About Section
-      ================================================== -->
-      
-      
-      
-      
-    
-    
     <!-- Instagram Section
       ================================================== -->
-        <section id="instagram-section" class="section-wrapper instagram-section"><!-- add main section background here -->
-        	<div class="background-inner1"><!-- add parallax background -->
-        			<div class="background-inner3 black60"><!-- add background color css to this div -->
-        				<div class="section-inner overlay2-50"><!-- add background pattern css to this div -->
-        		
-                		<!-- uncomment items below for shadows -->
-    					<!-- <img src="<?php echo get_template_directory_uri();?>/assets/img/shadow-top.png" class="shadow-top" alt="shadow"> -->  
-             			<!-- <img src="<?php echo get_template_directory_uri();?>/assets/img/shadow-bot.png" class="shadow-bot" alt="shadow"> -->
-                    
-                    		<div class="container">
-                
-                        		<div class="social-section-icon">
-                            		<i class="icon-instagram"></i>
-                        		</div>
-                        
-                        		<div class="insta"></div><!-- instagram feed -->
-                
-                    		</div><!-- /container -->
-                            
-                    	</div><!-- /section-inner -->
-                	</div><!-- /background-inner3 -->
-        	</div><!-- /background-inner1 -->
-		</section>
+    <section id="instagram-section" class="section-wrapper instagram-section"><!-- add main section background here -->
+        <div class="background-inner1"><!-- add parallax background -->
+        	<div class="background-inner3 black60"><!-- add background color css to this div -->
+        		<div class="section-inner overlay2-50"><!-- add background pattern css to this div -->
+	        		<!-- uncomment items below for shadows -->
+					<!-- <img src="<?php echo get_template_directory_uri();?>/assets/img/shadow-top.png" class="shadow-top" alt="shadow"> -->  
+	     			<!-- <img src="<?php echo get_template_directory_uri();?>/assets/img/shadow-bot.png" class="shadow-bot" alt="shadow"> -->
+	        		<div class="container">
+	            		<div class="social-section-icon">
+	                		<i class="icon-instagram"></i>
+	            		</div>
+	            		<div class="insta"></div><!-- instagram feed -->
+	        		</div><!-- /container -->             
+        		</div><!-- /section-inner -->
+    		</div><!-- /background-inner3 -->
+		</div><!-- /background-inner1 -->
+	</section>
     <!-- End Instagram Section
       ================================================== -->
-    
-    
-    
-    
-    
     <a id="services-marker" class="anchor"></a>
     
     <!-- Services Section
       ================================================== -->
-      	<section id="services-section" class="section-wrapper services-section"><!-- add main section background here -->
-        	<div class="background-inner1"><!-- add parallax background -->
-        			<div class="background-inner3"><!-- add background color css to this div -->
-        				<div class="section-inner"><!-- add background pattern css to this div -->
-                        
-        				<!-- uncomment items below for shadows -->
-    					<img src="<?php echo get_template_directory_uri();?>/assets/img/shadow-top.png" class="shadow-top" alt="shadow"> 
-             			<img src="<?php echo get_template_directory_uri();?>/assets/img/shadow-bot.png" class="shadow-bot" alt="shadow">
-                
-                			<div class="container">
-                
-                				<h2 class="section-title">What We Do<br /><span>a small sampling really.</span></h2>
-                
-                				<p class="section-text">Donec posuere auctizzle izzle. Phasellizzle shizznit elizzle ut da bomb you son of a bizzle tincidunt. Maecenas a da bomb. Vestibulizzle izzle lacus fo shizzle mah nizzle fo rizzle, mah home g-dizzle mauris elementum break it down.</p>
-                
-                
-                				<!-- services row-->
-                        		<div class="row">
-                    
-                            		<div class="one-third column">
-                            			<div class="service">
-                                			<h2 class="serv"><i class="icon-tools icon"></i>Service</h2>
-                                    		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
-                            			</div>
-                            		</div>
-                    
-                            		<div class="one-third column">
-                            			<div class="service">
-                                			<h2 class="serv"><i class="icon-camera icon"></i>Service</h2>
-                                    		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
-                            			</div>
-                            		</div>
-                            
-                            		<div class="one-third column">
-                            			<div class="service">
-                                			<h2 class="serv"><i class="icon-chat icon"></i>Service</h2>
-                                    		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
-                            			</div>
-                            		</div>
-                            
-                        		</div><!-- /services row-->
-                         
-                         		<!-- services row-->
-                        		<div class="row">
-                    
-                            		<div class="one-third column">
-                            			<div class="service">
-                                			<h2 class="serv"><i class="icon-basket icon"></i>Service</h2>
-                                    		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
-                            			</div>
-                            		</div>
-                    
-                            		<div class="one-third column">
-                            			<div class="service">
-                                			<h2 class="serv"><i class="icon-shuffle icon"></i>Service</h2>
-                                   		 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
-                            			</div>
-                            		</div>
-                            
-                            		<div class="one-third column">
-                            			<div class="service">
-                                			<h2 class="serv"><i class="icon-trophy icon"></i>Service</h2>
-                                    		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
-                            			</div>
-                            		</div>
-                            
-                        		</div><!-- /services row-->
-                   
-                        
-                        		<!-- capabilities row -->
-                        		<div class="row">
-                    
-                            		<div class="sixteen columns">
-                            
-                            			<div class="progress-bar colored stripes mb15">
-                                    		<h4 class="mb10">SEO</h4>
-    										<span style="width: 65%"></span>
-										</div>
-                                        
-                                        <div class="progress-bar colored stripes mb15">
-                                    		<h4 class="mb10">Design</h4>
-    										<span style="width: 75%"></span>
-										</div>
-                                        
-                                        <div class="progress-bar colored stripes mb15">
-                                    		<h4 class="mb10">WordPress</h4>
-    										<span style="width: 85%"></span>
-										</div>
-                                        
-                                        <div class="progress-bar colored stripes mb15">
-                                    		<h4 class="mb10">Mobile Websites</h4>
-    										<span style="width: 95%"></span>
-										</div>
-                                        
-                                      </div>
-                                
-       
-                            	</div> <!-- /capabilities row -->
-                        
-                        	</div><!-- /container -->
-                            
-                    	</div><!-- /section-inner -->
-                	</div><!-- /background-inner3 -->
-        	</div><!-- /background-inner1 -->
-		</section>
+  	<section id="services-section" class="section-wrapper services-section"><!-- add main section background here -->
+	   	<div class="background-inner1"><!-- add parallax background -->
+    		<div class="background-inner3"><!-- add background color css to this div -->
+        		<div class="section-inner"><!-- add background pattern css to this div -->      
+        			<!-- uncomment items below for shadows -->
+    				<img src="<?php echo get_template_directory_uri();?>/assets/img/shadow-top.png" class="shadow-top" alt="shadow"> 
+            		<img src="<?php echo get_template_directory_uri();?>/assets/img/shadow-bot.png" class="shadow-bot" alt="shadow">
+            		<div class="container">
+            			<h2 class="section-title">What We Do<br /><span>a small sampling really.</span></h2>
+            			<p class="section-text">Donec posuere auctizzle izzle. Phasellizzle shizznit elizzle ut da bomb you son of a bizzle tincidunt. Maecenas a da bomb. Vestibulizzle izzle lacus fo shizzle mah nizzle fo rizzle, mah home g-dizzle mauris elementum break it down.</p>
+            			<!-- services row-->
+                   		<div class="row">          
+                       		<div class="one-third column">
+            	       			<div class="service">
+                	       			<h2 class="serv"><i class="icon-tools icon"></i>Service</h2>
+                               		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                       			</div>
+                       		</div>
+                       		<div class="one-third column">
+                    			<div class="service">
+                        			<h2 class="serv"><i class="icon-camera icon"></i>Service</h2>
+                               		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                            	</div>
+                            </div>
+                            <div class="one-third column">
+                            	<div class="service">
+                            		<h2 class="serv"><i class="icon-chat icon"></i>Service</h2>
+                                	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                            	</div>
+                            </div>
+                        </div>
+                        <!-- /services row-->
+                        <!-- services row-->
+                		<div class="row">
+                    		<div class="one-third column">
+                    			<div class="service">
+                        			<h2 class="serv"><i class="icon-basket icon"></i>Service</h2>
+                            		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                    			</div>
+                    		</div>
+                    		<div class="one-third column">
+                    			<div class="service">
+                        			<h2 class="serv"><i class="icon-shuffle icon"></i>Service</h2>
+                           		 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                    			</div>
+                    		</div>
+                    		<div class="one-third column">
+                    			<div class="service">
+                        			<h2 class="serv"><i class="icon-trophy icon"></i>Service</h2>
+                            		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                    			</div>
+                    		</div>
+                		</div>
+                		<!-- /services row-->
+                        <!-- capabilities row -->
+                        <div class="row">
+	                		<div class="sixteen columns">
+	                			<div class="progress-bar colored stripes mb15">
+	                        		<h4 class="mb10">SEO</h4>
+									<span style="width: 65%"></span>
+								</div>
+	                            <div class="progress-bar colored stripes mb15">
+	                        		<h4 class="mb10">Design</h4>
+									<span style="width: 75%"></span>
+								</div>
+	                            <div class="progress-bar colored stripes mb15">
+	                        		<h4 class="mb10">WordPress</h4>
+									<span style="width: 85%"></span>
+								</div>
+	                            <div class="progress-bar colored stripes mb15">
+	                        		<h4 class="mb10">Mobile Websites</h4>
+									<span style="width: 95%"></span>
+								</div>
+	                        </div>
+                        </div> 
+                        <!-- /capabilities row -->
+                    </div>
+                    <!-- /container -->
+                </div><!-- /section-inner -->
+            </div><!-- /background-inner3 -->
+        </div><!-- /background-inner1 -->
+	</section>
     <!-- End Instagram Section
       ================================================== -->
     
@@ -1923,36 +1686,10 @@
    <!-- JS
 	================================================== -->
     
-	<script src="<?php echo get_template_directory_uri();?>/assets/js/jquery-1.10.2.min.js"></script>
-
-    
-    <!-- preloader -->
-	<script type="text/javascript">
-      jQuery(document).ready(function() {
-	jQuery("body").addClass("hidden_body");
-	 })
-        jQuery(window).load(function() { // makes sure the whole site is loaded
-        	jQuery("#status").fadeOut(); // will first fade out the loading animation
-          jQuery("#preloader").delay(350).fadeOut("slow"); // will fade out the white DIV that covers the website.
-         jQuery("body").removeClass("hidden_body"); 
-       })
-	</script>
-
-    <!-- google map -->
-	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script src="<?php echo get_template_directory_uri();?>/assets/js/jquery.gmap.min.js"></script>
-    <!-- end google map -->
-
-    
-    
-      <!-- jQuery KenBurn Slider -->
-    <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/assets/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
-    
-     <script src="<?php echo get_template_directory_uri();?>/assets/js/jquery.validate.pack.js"></script>
-     
-    <script src="<?php echo get_template_directory_uri();?>/assets/js/scripts.js"></script>
-    <script src="<?php echo get_template_directory_uri();?>/assets/js/screen.js"></script>
-    
+<?php
+	/* Wordpress Footer */
+	wp_footer();
+?>    
 
 
 </body>

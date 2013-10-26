@@ -1,6 +1,6 @@
 <?php
 /**
- * BootstrapWP Theme Functions
+ * Swagger Theme Functions
  *
  * @author Jeremy Davis
  * @package WordPress
@@ -10,7 +10,7 @@
  * Maximum allowed width of content within the theme.
  */
 if (!isset($content_width)) {
-    $content_width = 770;
+    $content_width = 980;
 }
 
 /**
@@ -56,6 +56,7 @@ function swag_styles_loader() {
 
     wp_enqueue_style('swag-style', get_template_directory_uri() . '/assets/css/base.css', false, '1.0', 'all');
     wp_enqueue_style('swag-sections', get_template_directory_uri() . '/assets/css/sections.css', false, '1.0', 'all');
+    wp_enqueue_style('revo-slider', get_template_directory_uri() . '/assets/revslider/rs-plugin/css/settings.css', false, '1.0', 'all');
     wp_enqueue_style('swag-default', get_stylesheet_uri());
     
 }
@@ -65,29 +66,46 @@ add_action('wp_enqueue_scripts', 'swag_styles_loader');
  * Load JavaScript and jQuery files for theme.
  *
  */
-function bootstrapwp_scripts_loader() {
+function swag_scripts_loader() {
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
-
         wp_enqueue_script('comment-reply');
 
     }
-    
-    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '1.0', true);
-    wp_enqueue_script('demo-js', get_template_directory_uri() . '/assets/js/bootstrapwp.demo.js', array('bootstrap-js'),'1.0',true);
 
+    // DE-REGISTER JQUERY AND RE REGISTER THE NEWEST VERSION
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", false, true);
+    wp_enqueue_script('jquery');
+    
+    //The loader script that loads the ajax loader gif until the window graphics are loaded.
+    wp_enqueue_script('loader-js', get_template_directory_uri() . '/assets/js/loader.js', array('jquery'), '1', true);
+
+
+    // Enqueue the modernizr script file and specify that it should be placed in the <head>
+    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/assets/js/modernizr.js', array(), '2.5.2', false);
+
+    //Google maps
+    wp_enqueue_script('maps-lib', 'http://maps.google.com/maps/api/js?sensor=false',array('jquery'),'1',true);
+    wp_enqueue_script('maps-scripts', get_template_directory_uri() . '/assets/js/jquery.gmap.min.js',array('jquery'), '1',true);
+
+    wp_enqueue_script('kenburn-slider', get_template_directory_uri() . '/assets/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js', array('jquery'), '1',true);
+    wp_enqueue_script('jquery-validate', get_template_directory_uri() . '/assets/js/jquery.validate.pack.js', array('jquery'), '1',true);
+    wp_enqueue_script('swag-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), '1', true);
+    wp_enqueue_script('swag-screen', get_template_directory_uri() . '/assets/js/screen.js', array('jquery'), '1', true);
+    
 }
-add_action('wp_enqueue_scripts', 'bootstrapwp_scripts_loader');
+add_action('wp_enqueue_scripts', 'swag_scripts_loader');
 
 /**
  * Define theme's widget areas.
  *
  */
-function bootstrapwp_widgets_init() {
+function swag_widgets_init() {
 
     register_sidebar(
         array(
-            'name'          => __('Page Sidebar', 'bootstrapwp'),
+            'name'          => __('Page Sidebar', 'swag'),
             'id'            => 'sidebar-page',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => "</div>",
@@ -98,7 +116,7 @@ function bootstrapwp_widgets_init() {
 
     register_sidebar(
         array(
-            'name'          => __('Posts Sidebar', 'bootstrapwp'),
+            'name'          => __('Posts Sidebar', 'swag'),
             'id'            => 'sidebar-posts',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => "</div>",
@@ -109,9 +127,9 @@ function bootstrapwp_widgets_init() {
 
     register_sidebar(
         array(
-            'name'          => __('Home Left', 'bootstrapwp'),
+            'name'          => __('Home Left', 'swag'),
             'id'            => 'home-left',
-            'description'   => __('Left textbox on homepage', 'bootstrapwp'),
+            'description'   => __('Left textbox on homepage', 'swag'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<h2>',
@@ -121,9 +139,9 @@ function bootstrapwp_widgets_init() {
 
     register_sidebar(
         array(
-            'name'          => __('Home Middle', 'bootstrapwp'),
+            'name'          => __('Home Middle', 'swag'),
             'id'            => 'home-middle',
-            'description'   => __('Middle textbox on homepage', 'bootstrapwp'),
+            'description'   => __('Middle textbox on homepage', 'swag'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<h2>',
@@ -133,9 +151,9 @@ function bootstrapwp_widgets_init() {
 
     register_sidebar(
         array(
-            'name'          => __('Home Right', 'bootstrapwp'),
+            'name'          => __('Home Right', 'swag'),
             'id'            => 'home-right',
-            'description'   => __('Right textbox on homepage', 'bootstrapwp'),
+            'description'   => __('Right textbox on homepage', 'swag'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<h2>',
@@ -145,9 +163,9 @@ function bootstrapwp_widgets_init() {
 
     register_sidebar(
         array(
-            'name'          => __('Footer Content', 'bootstrapwp'),
+            'name'          => __('Footer Content', 'swag'),
             'id'            => 'footer-content',
-            'description'   => __('Footer text or acknowledgements', 'bootstrapwp'),
+            'description'   => __('Footer text or acknowledgements', 'swag'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<h4>',
@@ -156,27 +174,27 @@ function bootstrapwp_widgets_init() {
     );
 
 }
-add_action('init', 'bootstrapwp_widgets_init');
+add_action('init', 'swag_widgets_init');
 
 
 /**
  * Display page next/previous navigation links.
  *
  */
-if (!function_exists('bootstrapwp_content_nav')):
-    function bootstrapwp_content_nav($nav_id) {
+if (!function_exists('swag_content_nav')):
+    function swag_content_nav($nav_id) {
 
         global $wp_query, $post;
 
         if ($wp_query->max_num_pages > 1) : ?>
 
         <nav id="<?php echo $nav_id; ?>" class="navigation" role="navigation">
-            <h3 class="assistive-text"><?php _e('Post navigation', 'bootstrapwp'); ?></h3>
+            <h3 class="assistive-text"><?php _e('Post navigation', 'swag'); ?></h3>
             <div class="nav-previous alignleft"><?php next_posts_link(
-                __('<span class="meta-nav">&larr;</span> Older posts', 'bootstrapwp')
+                __('<span class="meta-nav">&larr;</span> Older posts', 'swag')
             ); ?></div>
             <div class="nav-next alignright"><?php previous_posts_link(
-                __('Newer posts <span class="meta-nav">&rarr;</span>', 'bootstrapwp')
+                __('Newer posts <span class="meta-nav">&rarr;</span>', 'swag')
             ); ?></div>
         </nav><!-- #<?php echo $nav_id; ?> .navigation -->
 
@@ -188,8 +206,8 @@ endif;
  * Display template for comments and pingbacks.
  *
  */
-if (!function_exists('bootstrapwp_comment')) :
-    function bootstrapwp_comment($comment, $args, $depth)
+if (!function_exists('swag_comment')) :
+    function swag_comment($comment, $args, $depth)
     {
         $GLOBALS['comment'] = $comment;
         switch ($comment->comment_type) :
@@ -199,7 +217,7 @@ if (!function_exists('bootstrapwp_comment')) :
                 <li class="comment media" id="comment-<?php comment_ID(); ?>">
                     <div class="media-body">
                         <p>
-                            <?php _e('Pingback:', 'bootstrapwp'); ?> <?php comment_author_link(); ?>
+                            <?php _e('Pingback:', 'swag'); ?> <?php comment_author_link(); ?>
                         </p>
                     </div><!--/.media-body -->
                 <?php
@@ -220,14 +238,14 @@ if (!function_exists('bootstrapwp_comment')) :
                                     // If current post author is also comment author, make it known visually.
                                     ($comment->user_id === $post->post_author) ? '<span class="label"> ' . __(
                                         'Post author',
-                                        'bootstrapwp'
+                                        'swag'
                                     ) . '</span> ' : ''); ?>
                             </h4>
 
                             <?php if ('0' == $comment->comment_approved) : ?>
                                 <p class="comment-awaiting-moderation"><?php _e(
                                     'Your comment is awaiting moderation.',
-                                    'bootstrapwp'
+                                    'swag'
                                 ); ?></p>
                             <?php endif; ?>
 
@@ -237,7 +255,7 @@ if (!function_exists('bootstrapwp_comment')) :
                                             esc_url(get_comment_link($comment->comment_ID)),
                                             get_comment_time('c'),
                                             sprintf(
-                                                __('%1$s at %2$s', 'bootstrapwp'),
+                                                __('%1$s at %2$s', 'swag'),
                                                 get_comment_date(),
                                                 get_comment_time()
                                             )
@@ -245,7 +263,7 @@ if (!function_exists('bootstrapwp_comment')) :
                             </p>
                             <p class="reply">
                                 <?php comment_reply_link( array_merge($args, array(
-                                            'reply_text' => __('Reply <span>&darr;</span>', 'bootstrapwp'),
+                                            'reply_text' => __('Reply <span>&darr;</span>', 'swag'),
                                             'depth'      => $depth,
                                             'max_depth'  => $args['max_depth']
                                         )
@@ -264,16 +282,16 @@ endif;
  * Display template for post meta information.
  *
  */
-if (!function_exists('bootstrapwp_posted_on')) :
-    function bootstrapwp_posted_on()
+if (!function_exists('swag_posted_on')) :
+    function swag_posted_on()
     {
-        printf(__('Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>','bootstrapwp'),
+        printf(__('Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>','swag'),
             esc_url(get_permalink()),
             esc_attr(get_the_time()),
             esc_attr(get_the_date('c')),
             esc_html(get_the_date()),
             esc_url(get_author_posts_url(get_the_author_meta('ID'))),
-            esc_attr(sprintf(__('View all posts by %s', 'bootstrapwp'), get_the_author())),
+            esc_attr(sprintf(__('View all posts by %s', 'swag'), get_the_author())),
             esc_html(get_the_author())
         );
     }
@@ -284,21 +302,21 @@ endif;
  * Adds custom classes to the array of body classes.
  *
  */
-function bootstrapwp_body_classes($classes)
+function swag_body_classes($classes)
 {
     if (!is_multi_author()) {
         $classes[] = 'single-author';
     }
     return $classes;
 }
-add_filter('body_class', 'bootstrapwp_body_classes');
+add_filter('body_class', 'swag_body_classes');
 
 
 /**
  * Add post ID attribute to image attachment pages prev/next navigation.
  *
  */
-function bootstrapwp_enhanced_image_navigation($url)
+function swag_enhanced_image_navigation($url)
 {
     global $post;
     if (wp_attachment_is_image($post->ID)) {
@@ -306,14 +324,14 @@ function bootstrapwp_enhanced_image_navigation($url)
     }
     return $url;
 }
-add_filter('attachment_link', 'bootstrapwp_enhanced_image_navigation');
+add_filter('attachment_link', 'swag_enhanced_image_navigation');
 
 
 /**
  * Checks if a post thumbnails is already defined.
  *
  */
-function bootstrapwp_is_post_thumbnail_set()
+function swag_is_post_thumbnail_set()
 {
     global $post;
     if (get_the_post_thumbnail()) {
@@ -328,11 +346,11 @@ function bootstrapwp_is_post_thumbnail_set()
  * Set post thumbnail as first image from post, if not already defined.
  *
  */
-function bootstrapwp_autoset_featured_img()
+function swag_autoset_featured_img()
 {
     global $post;
 
-    $post_thumbnail = bootstrapwp_is_post_thumbnail_set();
+    $post_thumbnail = swag_is_post_thumbnail_set();
     if ($post_thumbnail == true) {
         return get_the_post_thumbnail();
     }
@@ -358,7 +376,7 @@ function bootstrapwp_autoset_featured_img()
  * Define default page titles.
  *
  */
-function bootstrapwp_wp_title($title, $sep)
+function swag_wp_title($title, $sep)
 {
     global $paged, $page;
     if (is_feed()) {
@@ -373,17 +391,17 @@ function bootstrapwp_wp_title($title, $sep)
     }
     // Add a page number if necessary.
     if ($paged >= 2 || $page >= 2) {
-        $title = "$title $sep " . sprintf(__('Page %s', 'bootstrapwp'), max($paged, $page));
+        $title = "$title $sep " . sprintf(__('Page %s', 'swag'), max($paged, $page));
     }
     return $title;
 }
-add_filter('wp_title', 'bootstrapwp_wp_title', 10, 2);
+add_filter('wp_title', 'swag_wp_title', 10, 2);
 
 /**
  * Display template for breadcrumbs.
  *
  */
-function bootstrapwp_breadcrumbs()
+function swag_breadcrumbs()
 {
     $home      = 'Home'; // text for the 'Home' link
     $before    = '<li class="active">'; // tag before the current crumb
